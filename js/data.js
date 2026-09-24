@@ -17,7 +17,7 @@ const PORTFOLIO_DATA = {
     available: true, // toggle the green "available" pill
     email: "karanbastola87@gmail.com",
     phone: "+91-8860922438",
-    linkedin: "https://linkedin.com/in/karanbastola",
+    linkedin: "https://www.linkedin.com/in/karan-bastola-95782230a/",
   },
 
   /* ── STATS (hero section) ───────────────────────────────── */
