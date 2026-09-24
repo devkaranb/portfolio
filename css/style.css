@@ -66,6 +66,42 @@ nav {
 .nav-links a.active { color: var(--blue); }
 .nav-links a.active::after { width: 100%; }
 
+/* Mobile hamburger and pill menu */
+.nav-toggle {
+  display: none; align-items: center; justify-content: center;
+  width: 44px; height: 40px; border-radius: 8px; border: none;
+  background: transparent; color: var(--text); cursor: pointer;
+}
+.nav-toggle .hamburger { display: inline-block; width: 18px; height: 14px; position: relative; }
+.nav-toggle .hamburger span {
+  display: block; height: 2px; width: 100%; background: var(--text); border-radius: 2px;
+  position: absolute; left: 0; transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.nav-toggle .hamburger span:nth-child(1) { top: 0; }
+.nav-toggle .hamburger span:nth-child(2) { top: 6px; }
+.nav-toggle .hamburger span:nth-child(3) { top: 12px; }
+.nav-toggle[aria-expanded="true"] .hamburger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .hamburger span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] .hamburger span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+.nav-mobile {
+  position: absolute; right: 1.25rem; top: calc(100% + 8px);
+  background: rgba(5,8,16,0.92); border: 1px solid var(--border);
+  border-radius: 14px; padding: 0.5rem; min-width: 180px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6); opacity: 0; transform: translateY(-6px) scale(0.98);
+  pointer-events: none; transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 300;
+}
+.nav-mobile.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+.nav-mobile a { display: block; padding: 0.6rem 0.9rem; color: var(--muted); text-decoration: none; border-radius: 10px; font-weight: 600; }
+.nav-mobile a:hover { background: rgba(99,179,237,0.04); color: var(--text); }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: inline-flex; }
+  nav { padding: 0.9rem 1.25rem; }
+}
+
 /* ── HERO ── */
 .hero {
   min-height: 100vh; position: relative; z-index: 1;

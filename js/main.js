@@ -49,6 +49,16 @@ function buildNav() {
       <a href="#projects">Projects</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="hamburger"><span></span><span></span><span></span></span>
+    </button>
+    <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
     </div>`;
 }
 
@@ -231,4 +241,32 @@ function initInteractions() {
     const el = document.getElementById(id);
     if (el) scrollObs.observe(el);
   });
+
+  // Mobile nav toggle behavior
+  const toggle = document.querySelector('.nav-toggle');
+  const mobile = document.getElementById('nav-mobile');
+  if (toggle && mobile) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      mobile.classList.toggle('open');
+      mobile.setAttribute('aria-hidden', String(expanded));
+    });
+
+    // Close on link click
+    mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      toggle.setAttribute('aria-expanded', 'false');
+      mobile.classList.remove('open');
+      mobile.setAttribute('aria-hidden', 'true');
+    }));
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobile.classList.contains('open')) return;
+      if (toggle.contains(e.target) || mobile.contains(e.target)) return;
+      toggle.setAttribute('aria-expanded', 'false');
+      mobile.classList.remove('open');
+      mobile.setAttribute('aria-hidden', 'true');
+    });
+  }
 }
