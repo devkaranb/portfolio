@@ -40,7 +40,9 @@ function buildNav() {
   const nav = document.getElementById('nav');
   const d = PORTFOLIO_DATA.personal;
   nav.innerHTML = `
-    <div class="nav-logo">${d.name.split(' ').map(n => n[0]).join('')}.</div>
+    <div class="nav-left">
+      <img src="${d.avatar}" alt="${d.name}" style="width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid rgba(99,179,237,0.4);">
+    </div>
     <div class="nav-links">
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>

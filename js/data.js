@@ -10,6 +10,7 @@ const PORTFOLIO_DATA = {
   /* ── PERSONAL INFO ──────────────────────────────────────── */
   personal: {
     name: "Karan Bastola",
+    avatar: "assets/avatar.jpg",
     title: "Backend Developer",
     subtitle: "PHP · Laravel · Node.js · AngularJS · Nginx",
     description: "Building <strong>scalable APIs</strong>, enterprise Laravel systems, and real-time backends. 2+ years delivering production-grade software at <strong>Lepide</strong>, Delhi.",
