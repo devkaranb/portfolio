@@ -87,7 +87,7 @@ function buildHero() {
       <p class="hero-desc">${d.description}</p>
       <div class="hero-actions">
         <a class="btn-main" href="#contact">Let's work together</a>
-        <a class="btn-outline" href="#experience">See my work</a>
+        <a class="btn-outline" href="assets/resume.pdf" download>Download resume</a>
       </div>
       <div class="stats-row">${statsHTML}</div>
     </div>`;
