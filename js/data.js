@@ -1,163 +1,94 @@
-/**
- * ============================================================
- *  data.js — YOUR SINGLE SOURCE OF TRUTH
- *  Edit ONLY this file to update skills, experience, projects
- * ============================================================
- */
-
 const PORTFOLIO_DATA = {
-
-  /* ── PERSONAL INFO ──────────────────────────────────────── */
   personal: {
     name: "Karan Bastola",
     avatar: "assets/avatar.jpg",
+    heroAvatar: "assets/hero-avatar.png",
     title: "Backend Developer",
-    subtitle: "PHP · Laravel · Node.js · AngularJS · Nginx",
-    description: "Building <strong>scalable APIs</strong>, enterprise Laravel systems, and real-time backends. 2+ years delivering production-grade software at <strong>Lepide</strong>, Delhi.",
+    subtitle: "PHP / Laravel / Node.js / MySQL",
+    description: "I build scalable APIs, enterprise Laravel systems, and real-time backends that are easier to operate and evolve.",
     location: "Delhi, India",
-    available: true, // toggle the green "available" pill
+    available: true,
     email: "karanbastola87@gmail.com",
     phone: "+91-8860922438",
-    linkedin: "https://www.linkedin.com/in/karan-bastola-95782230a/",
+    linkedin: "https://www.linkedin.com/in/karan-bastola-95782230a/"
   },
-
-  /* ── STATS (hero section) ───────────────────────────────── */
   stats: [
-    { num: "2+",  label: "Years experience" },
-    { num: "8+",  label: "Technologies" },
-    { num: "∞",   label: "Bugs squashed" },
+    {
+      num: "2+",
+      label: "Years building"
+    },
+    {
+      num: "8+",
+      label: "Core technologies"
+    },
+    {
+      num: "24/7",
+      label: "Curiosity"
+    }
   ],
-
-  /* ── SKILLS ─────────────────────────────────────────────── */
-  /*
-   * To ADD a new skill category: copy one object block and add it to the array.
-   * To ADD a skill to a category: add { name: "Skill" } to its `skills` array.
-   * Mark a skill as new with: { name: "Skill", isNew: true }
-   */
   skills: [
     {
       category: "Backend",
-      skills: [
-        { name: "PHP" },
-        { name: "Laravel" },
-        { name: "Node.js", isNew: true },
-        { name: "RESTful APIs" },
-        { name: "Webhooks" },
-        { name: "Event-Driven" },
-      ],
+      skills: ["PHP", "Laravel", "Node.js", "REST APIs", "Webhooks", "Event-driven systems"]
     },
     {
       category: "Frontend",
-      skills: [
-        { name: "HTML5" },
-        { name: "CSS3" },
-        { name: "JavaScript" },
-        { name: "AngularJS", isNew: true },
-        { name: "AJAX" },
-        { name: "Bootstrap" },
-      ],
+      skills: ["JavaScript", "AngularJS", "HTML5", "CSS3", "AJAX", "Bootstrap"]
     },
     {
-      category: "Database & Server",
-      skills: [
-        { name: "MySQL" },
-        { name: "Nginx", isNew: true },
-        { name: "Git" },
-        { name: "Performance Optimization" },
-      ],
+      category: "Data & infra",
+      skills: ["MySQL", "Nginx", "Git", "Performance tuning", "Deployment"]
     },
     {
-      category: "Practices",
-      skills: [
-        { name: "MVC Architecture" },
-        { name: "Debugging" },
-        { name: "Live Chat Integration" },
-        { name: "Client Handling" },
-      ],
-    },
+      category: "Ways of working",
+      skills: ["MVC architecture", "Debugging", "Client collaboration", "Production support"]
+    }
   ],
-
-  /* ── EXPERIENCE ─────────────────────────────────────────── */
-  /*
-   * To ADD a new job: copy one object block and add it at the TOP of the array
-   * (most recent first).
-   */
   experience: [
     {
       role: "Product Developer",
       company: "Lepide",
       location: "Noida, India",
-      period: "May 2024 – Present",
+      period: "May 2024 - Present",
       bullets: [
-        "Maintained and enhanced enterprise-level Laravel applications, improving performance and system reliability.",
-        "Identified, debugged, and resolved critical production bugs, reducing downtime and improving user experience.",
-        "Designed new modules and features using Laravel, PHP, and MySQL following MVC best practices.",
-        "Collaborated across teams to deliver client projects on schedule and to quality standards.",
-        "Managed client deliveries — requirement gathering, demos, and post-launch support.",
-        "Resolved live production escalations by troubleshooting and coordinating rapid fixes.",
-      ],
-    },
-    // ── ADD NEW JOB BELOW ──
-    // {
-    //   role: "Senior Backend Developer",
-    //   company: "New Company",
-    //   location: "Remote",
-    //   period: "Jan 2026 – Present",
-    //   bullets: [
-    //     "Did something awesome.",
-    //   ],
-    // },
+        "Maintain and extend enterprise Laravel applications with a focus on reliability and performance.",
+        "Design modules and REST APIs with PHP, Laravel, and MySQL using clear MVC boundaries.",
+        "Investigate production issues, coordinate fixes, and support releases across client environments.",
+        "Partner with teams and clients through requirement discovery, demos, delivery, and post-launch support."
+      ]
+    }
   ],
-
-  /* ── PROJECTS ───────────────────────────────────────────── */
-  /*
-   * To ADD a project: copy one object block and add it to the array.
-   * Icons are emojis — pick any you like.
-   */
   projects: [
     {
-      icon: "⚡",
-      title: "Real-Time Laravel Application",
-      description: "Full-stack Laravel app with secure authentication, role-based authorization, and real-time notifications via webhooks and event-driven architecture. Production-grade with query optimization and clean code patterns.",
-      tags: ["Laravel", "PHP", "MySQL", "Webhooks", "AngularJS", "Bootstrap"],
-      link: "", // optional: add a GitHub/live URL
+      code: "01",
+      title: "Real-time Laravel application",
+      type: "Product engineering",
+      description: "A full-stack application with secure authentication, role-based authorization, event-driven notifications, and performance-minded data access.",
+      tags: ["Laravel", "PHP", "MySQL", "Webhooks", "AngularJS"]
     },
     {
-      icon: "🏗️",
-      title: "Enterprise Backend Systems",
-      description: "Contributed to multiple enterprise-grade codebases at Lepide — RESTful APIs, live chat module integration, scalable backend features, and Nginx server configuration for high-traffic production environments.",
-      tags: ["Laravel", "Node.js", "Nginx", "REST API", "MySQL", "Git"],
-      link: "",
-    },
-    // ── ADD NEW PROJECT BELOW ──
-    // {
-    //   icon: "🚀",
-    //   title: "My New Project",
-    //   description: "What it does.",
-    //   tags: ["Node.js", "Express"],
-    //   link: "https://github.com/yourrepo",
-    // },
+      code: "02",
+      title: "Enterprise backend systems",
+      type: "Platform work",
+      description: "Backend features across enterprise codebases, including REST APIs, live chat integration, scalable modules, and Nginx configuration for production traffic.",
+      tags: ["Laravel", "Node.js", "REST API", "Nginx", "Git"]
+    }
   ],
-
-  /* ── EDUCATION ──────────────────────────────────────────── */
   education: [
     {
-      icon: "🎓",
-      degree: "Master of Computer Applications (MCA)",
+      degree: "Master of Computer Applications (MCA )",
       institution: "Indira Gandhi National Open University, Delhi",
-      year: "In Progress",
+      year: "In progress"
     },
     {
-      icon: "📘",
       degree: "Bachelor of Computer Applications (BCA)",
       institution: "Indira Gandhi National Open University, Delhi",
-      year: "2025",
+      year: "2025"
     },
     {
-      icon: "💡",
       degree: "Master Diploma in Computer Application",
       institution: "Indian Institute of Computer Science, Delhi",
-      year: "2024",
-    },
-  ],
+      year: "2024"
+    }
+  ]
 };

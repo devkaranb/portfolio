@@ -1,88 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Karan Bastola — Backend Developer</title>
-  <meta name="description" content="Backend Developer specialising in PHP, Laravel, Node.js, AngularJS and Nginx. Based in Delhi, India.">
-
-  <!-- Fonts -->
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="Karan Bastola is a backend developer building reliable Laravel, PHP and Node.js systems from Delhi, India.">
+  <title>Karan Bastola | Backend Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Cursor glow -->
-  <div class="cursor-glow" id="glow"></div>
-
-  <!-- NAV -->
-  <nav id="nav"></nav>
-
-  <!-- HERO -->
-  <div class="hero" id="hero"></div>
-
-  <!-- SKILLS -->
-  <section class="section" id="skills">
-    <div class="section-inner">
-      <div class="eyebrow">Technical arsenal</div>
-      <h2>Skills &amp; Stack</h2>
-      <p class="section-sub">A focused, production-tested set of technologies.</p>
-      <div class="skills-wrap" id="skills-list"></div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- EXPERIENCE -->
-  <section class="section" id="experience">
-    <div class="section-inner">
-      <div class="eyebrow">Where I've worked</div>
-      <h2>Experience</h2>
-      <div class="exp-timeline" id="exp-timeline"></div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- PROJECTS -->
-  <section class="section" id="projects">
-    <div class="section-inner">
-      <div class="eyebrow">What I've built</div>
-      <h2>Projects</h2>
-      <div class="proj-grid" id="proj-grid"></div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- EDUCATION -->
-  <section class="section" id="education">
-    <div class="section-inner">
-      <div class="eyebrow">Academic background</div>
-      <h2>Education</h2>
-      <div class="edu-grid" id="edu-grid"></div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <div class="contact-section" id="contact">
-    <div class="contact-inner">
-      <div class="eyebrow" style="justify-content:center">Get in touch</div>
-      <h2>Let's build something together</h2>
-      <p>Open to backend development roles, freelance projects, and interesting collaborations.<br>Based in Delhi — available remotely worldwide.</p>
-      <div class="contact-cards" id="contact-cards"></div>
-    </div>
+  <div class="cursor-orb" id="cursor-orb" aria-hidden="true"></div>
+  <div class="site-shell">
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <nav id="nav" aria-label="Primary navigation"></nav>
+    <main>
+      <header class="hero" id="hero"></header>
+      <section class="section" id="skills" aria-labelledby="skills-title"><div class="section-inner"><div class="eyebrow">01 / Toolkit</div><h2 id="skills-title">The tools I use to ship.</h2><p class="section-sub">A focused, production-tested stack for building dependable products and APIs.</p><div class="skills-wrap" id="skills-list"></div></div></section>
+      <section class="section section-tinted" id="experience" aria-labelledby="experience-title"><div class="section-inner"><div class="eyebrow">02 / Experience</div><h2 id="experience-title">Work with useful constraints.</h2><div class="exp-timeline" id="exp-timeline"></div></div></section>
+      <section class="section" id="projects" aria-labelledby="projects-title"><div class="section-inner"><div class="eyebrow">03 / Selected work</div><h2 id="projects-title">Systems, features, and outcomes.</h2><div class="proj-grid" id="proj-grid"></div></div></section>
+      <section class="section section-tinted" id="education" aria-labelledby="education-title"><div class="section-inner compact-section"><div class="eyebrow">04 / Education</div><h2 id="education-title">Always still learning.</h2><div class="edu-grid" id="edu-grid"></div></div></section>
+      <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="contact-inner"><div class="eyebrow eyebrow-centered">05 / Contact</div><h2 id="contact-title">Have a backend problem worth solving?</h2><p>Open to backend roles, freelance projects, and thoughtful collaborations. Based in Delhi, available remotely worldwide.</p><div class="contact-cards" id="contact-cards"></div></div></section>
+    </main>
+    <footer id="footer"></footer>
   </div>
-
-  <!-- FOOTER -->
-  <footer id="footer"></footer>
-
-  <!-- Scripts: data first, then main -->
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
-
 </body>
 </html>
